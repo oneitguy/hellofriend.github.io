@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiiiiii</title>
+    <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    p {
+      text-align: center;
+      font-size: 24px;
+      font-family: Candara, Oswald;
+      margin: 20px;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 75%;
+      max-width: 300px;
+    }
+    #botao1 {
+      position: fixed;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    #botao2 {
+      position: absolute;
+      left: 50%;
+      bottom: 10%;
+      transform: translateX(-50%);
+      width: 100px; /* Adjust the width as needed */
+      height: 50px; /* Adjust the height as needed */
+    }
+  </style>
+</head>
+<body>
+<p>Can we hang out soon?</p>
+<img src="https://media.tenor.com/zGm5acSjHCIAAAAM/cat-begging.gif">
+<button id="botao1">YES BBY!</button>
+<button id="botao2">NO</button>
+<script>
+    const button2 = document.getElementById('botao2');
+
+    button2.addEventListener('mouseover', moveButton);
+    button2.addEventListener('click', moveButton);
+
+    function moveButton() {
+      const randomLeft = Math.floor(Math.random() * 61) + 20; // Random value between 20 and 80
+      const randomTop = Math.floor(Math.random() * 61) + 20; // Random value between 20 and 80
+
+      this.style.left = randomLeft + '%';
+      this.style.top = randomTop + 'vh';
+    }
+  </script>
+<script>
+    document.getElementById('botao1').addEventListener('click', function() {
+      alert('YAYY THANK U 😍❤');
+    });
+  </script>
+</body>
+</html>
