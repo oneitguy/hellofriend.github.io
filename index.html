@@ -1,66 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hii</title>
-    <style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hii</title>
+  <style>
     body {
       margin: 0;
       padding: 0;
-    }
-    p {
+      font-family: Candara, Oswald, sans-serif;
+      background-color: #fff;
       text-align: center;
-      font-size: 24px;
-      font-family: Candara, Oswald;
-      margin: 20px;
     }
+
+    p {
+      font-size: 5vw;
+      margin: 5vh 10vw 3vh;
+    }
+
     img {
-      display: block;
-      margin: 0 auto;
-      width: 75%;
+      width: 60vw;
       max-width: 300px;
+      margin: 0 auto;
     }
+
     #botao1 {
       position: fixed;
-      top: 70%;
-      left: 50%;
+      top: 70vh;
+      left: 50vw;
       transform: translate(-50%, -50%);
+      font-size: 4vw;
+      padding: 2vh 4vw;
+      border: none;
+      border-radius: 8px;
+      background-color: #ff69b4;
+      color: white;
+      cursor: pointer;
     }
+
     #botao2 {
       position: absolute;
-      left: 50%;
-      bottom: 10%;
+      left: 50vw;
+      bottom: 10vh;
       transform: translateX(-50%);
-      width: 100px; /* Adjust the width as needed */
-      height: 50px; /* Adjust the height as needed */
+      width: 80px;
+      height: 35px;
+      font-size: 14px;
+      border: none;
+      border-radius: 6px;
+      background-color: #ff6961;
+      color: white;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-<p>Can we go on a date</p>
-<img src="https://media.tenor.com/zGm5acSjHCIAAAAM/cat-begging.gif">
-<button id="botao1">YES!</button>
-<button id="botao2">NO</button>
-<script>
+
+  <p>Can we go on a date?</p>
+  <img src="https://media.tenor.com/zGm5acSjHCIAAAAM/cat-begging.gif" alt="Cute cat begging">
+  <button id="botao1">YES!</button>
+  <button id="botao2">NO</button>
+
+  <script>
     const button2 = document.getElementById('botao2');
 
     button2.addEventListener('mouseover', moveButton);
     button2.addEventListener('click', moveButton);
 
     function moveButton() {
-      const randomLeft = Math.floor(Math.random() * 61) + 20; // Random value between 20 and 80
-      const randomTop = Math.floor(Math.random() * 61) + 20; // Random value between 20 and 80
+      const randomLeft = Math.floor(Math.random() * 60) + 20; // 20% to 80%
+      const randomTop = Math.floor(Math.random() * 60) + 20;  // 20vh to 80vh
 
-      this.style.left = randomLeft + '%';
+      this.style.left = randomLeft + 'vw';
       this.style.top = randomTop + 'vh';
     }
+
+    document.getElementById('botao1').addEventListener('click', function() {
+      alert('THANK YOU 😍❤');
+      window.location.href = 'https://wa.me/917822870136?text=Let%27s%20go%20on%20a%20date%20%:)';
+    });
   </script>
-<script>
-  document.getElementById('botao1').addEventListener('click', function() {
-    alert('THANK YOU 😍❤');
-    window.location.href = 'https://wa.me/917822870136?text=Let%27s%20go%20on%20a%20date%20%:)';
-  });
-</script>
 
 </body>
 </html>
